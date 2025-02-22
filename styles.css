@@ -8,23 +8,69 @@ body{
 
 #item{
     height: 200px;
-    width: 70%;
+    width: 200%;
     display: flex;
     background-color: rgb(251, 248, 253);
     border-radius: 50px;
     justify-content: space-around;
     align-items: center;
     font-family: Georgia;
-    font-size: larger;
+    margin-top: 10px;
+    font-size: x-large;
 }
 
 #maintext{
     width: 100%;
-}
-.symb{
     display: flex;
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 0px;
 }
 
 #dth{
-  display: flex;
+display: flex;
+align-items: center;
+flex-direction: row;
+flex-wrap: nowrap;
 }
+
+#photo1{
+        width: max-content;
+        padding: 50px;
+        border: 5px solid #333; /* Колір та товщина рамки */
+        border-radius: 10px; /* Закруглені кути */
+        box-shadow: 5px 5px 15px rgb(134, 86, 255); /* Тінь */
+        display: inline-block;
+        background-color: rgb(251, 248, 253);
+
+    
+}
+
+#text1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+}
+
+#ksn{
+    background-color: white;
+}
+
+#bloc{
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+
+}
+
+
+
