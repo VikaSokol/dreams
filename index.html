@@ -31,5 +31,32 @@
 
 </div>
 
+
+<div class="board">
+  <img src="photo/дошка1.jpg">
+  <img src="photo/дошка2.jpg">
+  <img src="photo/дошка3.jpg">
+  <img src="photo/дошка4.jpg">
+  <img src="photo/дошка5.jpg">
+  <img src="photo/дошка6.jpg">
+  <img src="photo/дошка7.jpg">
+  <img src="photo/дошка8.jpg">
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const images = document.querySelectorAll(".board img");
+        images.forEach(img => {
+            const randomTop = Math.random() * 80 + "%";
+            const randomLeft = Math.random() * 80 + "%";
+            const randomRotate = (Math.random() * 20 - 10) + "deg";
+
+            img.style.top = randomTop;
+            img.style.left = randomLeft;
+            img.style.transform = `rotate(${randomRotate})`;
+        });
+    });
+</script>
+
 </body>
 </html>

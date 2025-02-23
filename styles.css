@@ -4,6 +4,7 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
 }
 
 #item{
@@ -71,6 +72,31 @@ flex-wrap: nowrap;
     padding: 20px;
 
 }
+
+
+.board {
+    position: relative;
+    width: 100vw; height: 100vh;
+}
+.board img {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    transform: rotate(var(--rotate));
+    transition: transform 0.3s;
+}
+.board img:hover {
+    transform: scale(1.1);
+}
+
+
+
+        
+       
+        
 
 
 
