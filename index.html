@@ -44,18 +44,37 @@
 </div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const images = document.querySelectorAll(".board img");
-        images.forEach(img => {
-            const randomTop = Math.random() * 80 + "%";
-            const randomLeft = Math.random() * 80 + "%";
-            const randomRotate = (Math.random() * 20 - 10) + "deg";
 
-            img.style.top = randomTop;
-            img.style.left = randomLeft;
-            img.style.transform = `rotate(${randomRotate})`;
+    document.addEventListener("DOMContentLoaded", () => {
+            const board = document.getElementById("board");
+            const images = document.querySelectorAll(".board img");
+            const placedPositions = [];
+            
+            images.forEach(img => {
+                let top, left;
+                let overlap;
+                
+                do {
+                    overlap = false;
+                    top = Math.random() * 70 + "vh";
+                    left = Math.random() * 70 + "vw";
+                    
+                    for (let pos of placedPositions) {
+                        let [prevTop, prevLeft] = pos;
+                        let distance = Math.hypot(parseFloat(top) - parseFloat(prevTop), parseFloat(left) - parseFloat(prevLeft));
+                        if (distance < 25) { // Мінімальна дистанція між фото
+                            overlap = true;
+                            break;
+                        }
+                    }
+                } while (overlap);
+                
+                placedPositions.push([top, left]);
+                img.style.top = top;
+                img.style.left = left;
+                img.style.transform = `rotate(${Math.random() * 20 - 10}deg)`;
+            });
         });
-    });
 </script>
 
 </body>
